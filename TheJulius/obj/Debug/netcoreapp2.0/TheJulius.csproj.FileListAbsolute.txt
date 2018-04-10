@@ -1,0 +1,11 @@
+C:\Users\Farshid\Documents\Visual Studio 2017\Projects\TheJulius\TheJulius\bin\Debug\netcoreapp2.0\TheJulius.deps.json
+C:\Users\Farshid\Documents\Visual Studio 2017\Projects\TheJulius\TheJulius\bin\Debug\netcoreapp2.0\TheJulius.runtimeconfig.json
+C:\Users\Farshid\Documents\Visual Studio 2017\Projects\TheJulius\TheJulius\bin\Debug\netcoreapp2.0\TheJulius.runtimeconfig.dev.json
+C:\Users\Farshid\Documents\Visual Studio 2017\Projects\TheJulius\TheJulius\bin\Debug\netcoreapp2.0\TheJulius.dll
+C:\Users\Farshid\Documents\Visual Studio 2017\Projects\TheJulius\TheJulius\obj\Debug\netcoreapp2.0\TheJulius.csprojResolveAssemblyReference.cache
+C:\Users\Farshid\Documents\Visual Studio 2017\Projects\TheJulius\TheJulius\obj\Debug\netcoreapp2.0\TheJulius.csproj.CoreCompileInputs.cache
+C:\Users\Farshid\Documents\Visual Studio 2017\Projects\TheJulius\TheJulius\obj\Debug\netcoreapp2.0\TheJulius.AssemblyInfoInputs.cache
+C:\Users\Farshid\Documents\Visual Studio 2017\Projects\TheJulius\TheJulius\obj\Debug\netcoreapp2.0\TheJulius.AssemblyInfo.cs
+C:\Users\Farshid\Documents\Visual Studio 2017\Projects\TheJulius\TheJulius\bin\Debug\netcoreapp2.0\TheJulius.pdb
+C:\Users\Farshid\Documents\Visual Studio 2017\Projects\TheJulius\TheJulius\obj\Debug\netcoreapp2.0\TheJulius.dll
+C:\Users\Farshid\Documents\Visual Studio 2017\Projects\TheJulius\TheJulius\obj\Debug\netcoreapp2.0\TheJulius.pdb
