@@ -1,18 +1,40 @@
 ﻿<!DOCTYPE html>
 <html>
 <title></title>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 <body>
-	<h3>Lijst met alle users.</h3>
-	<p id="lijstUsers"></p>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">JuliusPortal</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="Patienten.html">Patiënten</a></li>
+                <li><a href="Login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script src="functies.js"></script>
+    
+    <div class="col-md-3">
+        <h3>Meldt je aan!</h3>
+        <form action="/" method="get">
+            <input placeholder="leeftijd" class="form-control" type="text" name="Age" id="age"><br>
+            <input placeholder="naam" class="form-control" type="text" name="Name" id="name"><br>
+            <input class="btn btn-primary" type="button" value="Registreer" id="register">
+        </form>
 
-	<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
-	<script src="functies.js"></script>
+        <div class="alert alert-info">
+            <strong>Heb je al een account?</strong> <a href="Login.html">>Log dan nu in om aan de slag te gaan!<</a>
+        </div>
+    </div>
 
-	<form action="#" method="get">
-		First name: <input type="text" name="Age" id="age"><br>
-		Last name: <input type="text" name="Name" id="name"><br>
-		<input type="submit" value="Submit" id="send">
-	</form>
+
 
 </body>
 </html>
