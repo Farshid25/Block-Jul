@@ -8,6 +8,7 @@ using Julius.Models;
  
 
 using System.Diagnostics;
+using MongoDB.Driver;
 
 namespace Julius.Controllers{
     [Produces("application/json")]
@@ -21,13 +22,22 @@ namespace Julius.Controllers{
         [Route("")]
         [HttpPost]
         public void Post(User user) {
-
             _userService.AddBook(user); 
         }
 
-        [HttpGet("{id}")]
-        public async Task<User> GetBook(string id) {
+        [HttpGet("{id}/select")]
+        public async Task<User> SelectBook(string id) {
             return await _userService.SelectBook(id) ?? new User();
+        }
+
+        [HttpPut("{id}/put")]
+        public async Task Put(string id, int body) {
+            await _userService.Put(id, body);
+        }
+
+        [HttpDelete("{id}/delete")]
+        public async Task DeleteUserAsync(string id) {
+            await _userService.DeleteUser(id);
         }
 
         [HttpGet("all")]
