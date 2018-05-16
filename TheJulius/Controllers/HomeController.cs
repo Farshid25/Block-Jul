@@ -4,15 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Julius.Models;
-
- 
-
 using System.Diagnostics;
 using MongoDB.Driver;
+using TheJulius.Model;
 
 namespace Julius.Controllers{
     [Produces("application/json")]
-    [Route("api/User")]
+    [Route("User")]
     public class HomeController : Controller{
         private readonly UserService _userService = new UserService();
 
@@ -21,34 +19,46 @@ namespace Julius.Controllers{
  
         [Route("")]
         [HttpPost]
-        public void Post(User user) {
-            _userService.AddBook(user); 
+        public void PostUser([FromBody] User user) {
+            _userService.AddUser(user); 
+        }
+
+        [HttpPost("patient")]        
+        public void PostPatient([FromBody] User user) {
+            _userService.AddPatient(user);
         }
 
         [HttpGet("{id}/select")]
-        public async Task<User> SelectBook(string id) {
-            return await _userService.SelectBook(id) ?? new User();
+        public async Task<User> Get([FromBody]string id) {
+            return await _userService.SelectUser(id); // ?? new User();
         }
 
         [HttpPut("{id}/put")]
-        public async Task Put(string id, int body) {
-            await _userService.Put(id, body);
+        public async Task Put([FromBody]string id, UserEnum role) {
+                await _userService.UpdateUser(id, role);
         }
 
         [HttpDelete("{id}/delete")]
-        public async Task DeleteUserAsync(string id) {
+        public async Task Delete([FromBody]string id) {
             await _userService.DeleteUser(id);
         }
 
         [HttpGet("all")]
-        public async Task<IEnumerable<User>> GetBooks() {
-            return await _userService.SelectAllBooks();
+        public async Task<IEnumerable<User>> GetAll() {
+            return await _userService.SelectAllUsers();
         }
 
-        [HttpGet("redire")]
-        public IActionResult Redire( ) {
-              return Redirect("/Test.html"); 
-        }
+        //[HttpGet("login/{email}/{wachtwoord}}")]
+        //public async Task ([FromBody]string email, UserEnum wachtwoord) {
+        //    return await _userService.SelectAllUsers();
+        //}
+    }
+}
+
+        //[HttpGet("redire")]
+        //public IActionResult Redire( ) {
+        //      return Redirect("/Test.html"); 
+        //}
 
         //public IActionResult About(int id)
         //{
@@ -59,37 +69,10 @@ namespace Julius.Controllers{
         //        ViewData["Message"] = "nope";
         //    }
         //    return View();
-        //}
-
-        //public IActionResult Contact()
-        //{
-        //    ViewData["Message"] = "Your contact page.";
-
-        //    return View();
-        //}
+        //} 
 
         //public IActionResult Test() {
         //    ViewData["Message"] = "your test is here Farshid";
         //    return View();
-        //}
-
-        //public IActionResult Anna() {
-        //    ViewData["Message"] = "your test is here Farshid";
-        //    return View();
-        //}
-
-        //public IActionResult Final() {
-        //    ViewData["Message"] = "my final teskt";
-        //    return View();
-        //}
-        //public IActionResult Student() {
-        //    ViewData["Message"] = "My Shit";
-        //    return View();
-        //}
-
-        //public IActionResult Error()
-        //{
-        //    return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        //}
-    }
-}
+ 
+ 
